@@ -32,6 +32,12 @@ public class GamePanel extends JPanel implements ActionListener {
     Timer timer;
     Random random;
     GamePanel(){
+        random = new Random();
+        this.setPreferredSize(new Dimension(SCREEN_WIDTH,SCREEN_HEIGHT));
+        this.setBackground(Color.black);
+        this.setFocusable(true);
+        this.addKeyListener(new MyKeyAdapter());
+        startGame();
     }
 
     /* Methods to be used*/
@@ -51,6 +57,9 @@ public class GamePanel extends JPanel implements ActionListener {
 
     }
 
+    public void newApple(){
+        
+    }
     //move
     public void move(){
 
